@@ -1,0 +1,15 @@
+<!-- To display Products -->
+<mvc:View
+    controllerName="sap.btp.sapui5.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+     <Page id="Products" title="Available Products">
+    <content>
+      <List id="_IDGenList" items="{/Products}">
+        <StandardListItem id="_IDGenStandardListItem1" type="Active" title="{ProductName}" />
+      </List>
+    </content>
+  </Page>
+</mvc:View>
