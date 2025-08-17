@@ -5,11 +5,42 @@
     displayBlock="true"
     xmlns="sap.m"
 >
-     <Page id="Products" title="Available Products">
+     <Page id="Products" title="Orders">
     <content>
-      <List id="_IDGenList" items="{/Products}">
-        <StandardListItem id="_IDGenStandardListItem1" type="Active" title="{ProductName}" />
+
+    <!-- Entity set Categories found in metadata.xml
+    change for different -->
+      <List id="_IDGenList" items="{/Order_Details}">
+        <StandardListItem id="_IDGenStandardListItem1" type="Active" title="{OrderID}" />
       </List>
+
+
+      <Table id="myTable" items="{/Order_Details}" visible="true">
+      <!-- Define columns -->
+      <columns>
+      <Column id="_IDGenColumn1" visible="true">
+            <Text id="_IDGenText" text="Order ID"/>
+        </Column>
+        <Column id="_IDGenColumn2" visible="true">
+            <Text id="_IDGenText1" text="Product ID"/>
+        </Column>
+        <Column id="_IDGenColumn3">
+            <Text id="_IDGenText5" text="Unit Price"/>
+        </Column>
+        </columns>
+
+        <!-- Bind data to columns -->
+        <items>
+        <ColumnListItem id="_IDGenColumnListItem1" visible="true">
+            <cells>
+                <Text id="_IDGenText2" text="{OrderID}" visible="true"/>
+                <Text id="_IDGenText3" text="{ProductID}" visible="true"/>
+                <Text id="_IDGenText4" text="{UnitPrice}" visible="true"/>
+            </cells>
+        </ColumnListItem>
+    </items>
+      </Table>
+
     </content>
   </Page>
 </mvc:View>
