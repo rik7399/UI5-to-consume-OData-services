@@ -1,0 +1,36 @@
+<mvc:View
+    displayBlock="true"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+>
+    <Page
+        id="Image"
+        title="Test Image"
+    >
+        <content>
+            <Text
+                id="_IDGenText6"
+                text="death"
+            />
+            <VBox
+                id="_IDGenVBox1"
+                class="sapUiSmallMarginTopBottom sapUiLargeMarginBeginEnd"
+            >
+                <HBox
+                    id="_IDGenHBox"
+                    justifyContent="SpaceBetween"
+                >
+                    <VBox id="_IDGenVBox2">
+                        <Image
+                            id="img01"
+                            src="./image/dreams.png"
+                            width="50px" height="50px"
+                            visible="true"
+                        />
+                                           
+                        </VBox>
+                </HBox>
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>

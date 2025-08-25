@@ -95,12 +95,34 @@
           "target": [
             "TargetView1"
           ]
+        },
+        {
+          "name": "ImageDisplay",
+          "pattern": "View1/ImageDisplay",
+          "target": [
+            "ImageDisplay"
+          ]
+        },
+        {
+          "name": "View2",
+          "pattern": "View1/{OrderID}",
+          "target": [
+            "View2"
+          ]
         }
       ],
       "targets": {
         "TargetView1": {
           "id": "View1",
           "name": "View1"
+        },
+        "ImageDisplay": {
+          "id": "ImageDisplay",
+          "name": "ImageDisplay"
+        },
+        "View2": {
+          "id": "View2",
+          "name": "View2"
         }
       }
     },

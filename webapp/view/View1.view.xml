@@ -7,7 +7,7 @@
 >
      <Page id="Products" title="Orders">
     <content>
-
+    <Button id="_IDGenButton"  text="Image Display" press=".onDisplayImage"/>
     <!-- Entity set Categories found in metadata.xml
     change for different -->
       <List id="_IDGenList" items="{/Order_Details}">
@@ -33,7 +33,8 @@
         <items>
         <ColumnListItem id="_IDGenColumnListItem1" visible="true">
             <cells>
-                <Text id="_IDGenText2" text="{OrderID}" visible="true"/>
+                <!-- <Text id="_IDGenText2" text="{OrderID}" visible="true"/> -->
+                <Link id="_IDGenLink2" text="{OrderID}" press=".onOrderLink"/>
                 <Text id="_IDGenText3" text="{ProductID}" visible="true"/>
                 <Text id="_IDGenText4" text="{UnitPrice}" visible="true"/>
             </cells>
