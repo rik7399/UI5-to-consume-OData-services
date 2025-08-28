@@ -23,8 +23,7 @@
                     <VBox id="_IDGenVBox2">
                         <Image
                             id="img01"
-                            src="./image/dreams.png"
-                            width="50px" height="50px"
+                            src="/view/image/dreams.png"
                             visible="true"
                         />
                                            

@@ -9,6 +9,32 @@
         title="Breakdown"
     >
         <content>
+        <!-- Display order Image -->
+            <VBox
+                id="_IDGenVBox3"
+                justifyContent="Center"
+                alignContent="Center"
+                class="sapUiSmallMarginTopBottom sapUiLargeMarginBeginEnd"
+            >
+                <HBox
+                    id="_IDGenHBox1"
+                    width="100%"
+                    justifyContent="Center"
+                    alignContent="Center"
+                    class="sapUiSmallMarginAuto"
+                >
+                    <VBox id="_IDGenVBox4">
+                        <Image
+                            id="_IDGenImage"
+                            src="/view/image/{viewForView2>/OrderNumber}.png"
+                            height="200px"
+                            width="200px"
+                            visible="true"
+                        />
+                    </VBox>
+                </HBox>
+            </VBox>
+
             <Text
                 id="_IDGenText7"
                 text="Order ID: {viewForView2>/OrderNumber}"
@@ -92,9 +118,7 @@
                 </items>
             </Table>
 
-
             <!-- HANDLING DEEP NESTED TABLES IN JSON MODELS -->
-
 
             <!-- Prod is an array and needs to be bound to a table -->
             <!-- 
@@ -105,7 +129,6 @@
                 text=" Customer : {returnedOrder>/Prod/0/Order/CustomerID}"
                 visible="true"
             />
-            
 
             <!-- Table loops over Prod array and gets the objects
             we can navigate to required property : Order and get further details  -->

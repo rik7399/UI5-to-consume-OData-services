@@ -5,43 +5,151 @@
     displayBlock="true"
     xmlns="sap.m"
 >
-     <Page id="Products" title="Orders">
-    <content>
-    <Button id="_IDGenButton"  text="Image Display" press=".onDisplayImage"/>
-    <!-- Entity set Categories found in metadata.xml
+    <Page
+        id="Products"
+        title="Orders"
+    >
+        <content>
+            <HBox
+                id="myHBox"
+                alignItems="Center"
+                justifyContent="Center"
+            >
+                <Button
+                    id="_IDGenButton"
+                    text="Image Display"
+                    press=".onDisplayImage"
+                />
+            </HBox>
+
+            <VBox 
+                id="_IDGenVBox"
+                class="sapUiSmallMarginTopBottom sapUiLargeMarginBeginEnd"
+            >
+                <HBox
+                    id="_IDGenHBox3"
+                    justifyContent="Center"
+                    class="sapUiSmallMarginAuto"
+                >
+                    <Image
+                        id="_IDGenImage1"
+                        src="/view/image/website_logo.png"
+                        visible="true"
+                        height="200px"
+                        width="200px"
+                    />
+                </HBox>
+            </VBox>
+
+            <!-- Entity set Categories found in metadata.xml
     change for different -->
-      <List id="_IDGenList" items="{/Order_Details}">
-        <StandardListItem id="_IDGenStandardListItem1" type="Active" title="{OrderID}" />
-      </List>
 
+            <Panel
+                id="_IDGenPanel1"
+                expandable="true"
+                expanded="false"
+            >
+                <headerToolbar>
+                    <Toolbar id="panelHeader">
+                        <content>
+                            <Title
+                                id="_IDGenTitle"
+                                text="Click Me to Expand/Collapse Order List"
+                            />
+                        </content>
+                    </Toolbar>
+                </headerToolbar>
+                <content>
+                    <List
+                        id="_IDGenList"
+                        items="{/Order_Details}"
+                    >
+                        <StandardListItem
+                            id="_IDGenStandardListItem1"
+                            type="Active"
+                            title="{OrderID}"
+                        />
+                    </List>
+                </content>
+            </Panel>
+            <Panel
+                id="_IDGenPanel"
+                expandable="true"
+                expanded="false"
+            >
+                <headerToolbar>
+                    <Toolbar id="_IDGenToolbar1">
+                        <content>
+                            <Title
+                                id="_IDGenTitle1"
+                                text="Click Me to Expand/Collapse Order Table"
+                            />
+                        </content>
+                    </Toolbar>
+                </headerToolbar>
+                <content>
+                    <Table
+                        id="myTable"
+                        items="{/Order_Details}"
+                        visible="true"
+                    >
+                        <!-- Define columns -->
+                        <columns>
+                            <Column
+                                id="_IDGenColumn1"
+                                visible="true"
+                            >
+                                <Text
+                                    id="_IDGenText"
+                                    text="Order ID"
+                                />
+                            </Column>
+                            <Column
+                                id="_IDGenColumn2"
+                                visible="true"
+                            >
+                                <Text
+                                    id="_IDGenText1"
+                                    text="Product ID"
+                                />
+                            </Column>
+                            <Column id="_IDGenColumn3">
+                                <Text
+                                    id="_IDGenText5"
+                                    text="Unit Price"
+                                />
+                            </Column>
+                        </columns>
 
-      <Table id="myTable" items="{/Order_Details}" visible="true">
-      <!-- Define columns -->
-      <columns>
-      <Column id="_IDGenColumn1" visible="true">
-            <Text id="_IDGenText" text="Order ID"/>
-        </Column>
-        <Column id="_IDGenColumn2" visible="true">
-            <Text id="_IDGenText1" text="Product ID"/>
-        </Column>
-        <Column id="_IDGenColumn3">
-            <Text id="_IDGenText5" text="Unit Price"/>
-        </Column>
-        </columns>
-
-        <!-- Bind data to columns -->
-        <items>
-        <ColumnListItem id="_IDGenColumnListItem1" visible="true">
-            <cells>
-                <!-- <Text id="_IDGenText2" text="{OrderID}" visible="true"/> -->
-                <Link id="_IDGenLink2" text="{OrderID}" press=".onOrderLink"/>
-                <Text id="_IDGenText3" text="{ProductID}" visible="true"/>
-                <Text id="_IDGenText4" text="{UnitPrice}" visible="true"/>
-            </cells>
-        </ColumnListItem>
-    </items>
-      </Table>
-
-    </content>
-  </Page>
+                        <!-- Bind data to columns -->
+                        <items>
+                            <ColumnListItem
+                                id="_IDGenColumnListItem1"
+                                visible="true"
+                            >
+                                <cells>
+                                    <!-- <Text id="_IDGenText2" text="{OrderID}" visible="true"/> -->
+                                    <Link
+                                        id="_IDGenLink2"
+                                        text="{OrderID}"
+                                        press=".onOrderLink"
+                                    />
+                                    <Text
+                                        id="_IDGenText3"
+                                        text="{ProductID}"
+                                        visible="true"
+                                    />
+                                    <Text
+                                        id="_IDGenText4"
+                                        text="{UnitPrice}"
+                                        visible="true"
+                                    />
+                                </cells>
+                            </ColumnListItem>
+                        </items>
+                    </Table>
+                </content>
+            </Panel>
+        </content>
+    </Page>
 </mvc:View>
